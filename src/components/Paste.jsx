@@ -42,7 +42,7 @@ const Paste = () => {
             {filteredPastes.length > 0 ? (
               filteredPastes.map((paste) => (
                 <div
-                  key={paste?._id}
+                  key={paste?._id}  // Optional chaining used here, if paste is null or undefined, accessing its prop will not throw an error as this  expression will short-circuit and return undefined instead of throwing an error.
                   className="border border-[rgba(128,121,121,0.3)] w-full gap-y-6 justify-between flex flex-col sm:flex-row p-4 rounded-[0.3rem]"
                 >
                   {/* heading and Description */}
